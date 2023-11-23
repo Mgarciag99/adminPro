@@ -1,1 +1,53 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Progress bar <a class="get-code" data-toggle="collapse" href="#pgr3"
+                        aria-expanded="true"><i class="fa fa-code" title="" data-toggle="tooltip"
+                            data-original-title="Get Code"></i></a></h4>
+                <div 
+                    class="progress-bar bg-primary progress-bar-striped active" 
+                    style="height:10px;" 
+                    [style.width]="getPorcent1"
+                    role="progressbar"
+                >
+
+                </div>
+                <br>
+                <div 
+                    class="progress-bar bg-info progress-bar-striped active" 
+                    style="height:10px;" 
+                    [style.width]="getPorcent2"
+                    role="progressbar"
+                >
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementator
+                [progress]="10"
+                (changeProgress)="setProgress($event)"
+                ></app-incrementator>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementator
+                [progress]="10"
+                (changeProgress)="setProgress2($event)"
+                [btnClass]="'btn-info'"
+                ></app-incrementator>
+            </div>
+        </div>
+    </div>
+</div>
